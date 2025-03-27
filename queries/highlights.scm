@@ -1,6 +1,7 @@
 ; Variables
 ;----------
 
+(formal_parameters  (identifier) @void)
 (identifier) @variable
 
 ; Properties
@@ -86,6 +87,8 @@
   (template_string)
 ] @string
 
+(unary_expression "-" @number)
+
 (regex) @string.special
 (number) @number
 
@@ -95,7 +98,6 @@
 [
   ";"
   (optional_chain)
-  "."
   ","
 ] @punctuation.delimiter
 
@@ -118,7 +120,6 @@
   "<="
   "<<"
   "<<="
-  "="
   "=="
   "==="
   "!"
